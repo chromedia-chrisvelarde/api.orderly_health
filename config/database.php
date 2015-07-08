@@ -26,7 +26,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    //'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => 'mongodb',
 
     /*
     |--------------------------------------------------------------------------
@@ -45,6 +46,13 @@ return [
     */
 
     'connections' => [
+
+        'mongodb' => array(
+            'driver'   => 'mongodb',
+            'host'     => 'localhost',
+            'port'     => 27017,
+            'database' => 'orderlyhealth'
+        ),
 
         'sqlite' => [
             'driver'   => 'sqlite',

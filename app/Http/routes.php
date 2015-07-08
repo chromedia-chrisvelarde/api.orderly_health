@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(array('prefix' => 'api/v1', 'middleware' => 'cors'), function()
+{
+    Route::resource('users', 'UserController');
 });
