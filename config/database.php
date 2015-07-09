@@ -1,5 +1,5 @@
 <?php
-
+var_dump(env('DB_HOST')); exit;
 return [
 
     /*
@@ -48,10 +48,15 @@ return [
     'connections' => [
 
         'mongodb' => array(
-            'driver'   => 'mongodb',
-            'host'     => 'localhost',
+//            'driver'   => 'mongodb',
+//            'host'     => 'localhost',
+//            'database' => 'orderlyhealth',
+            'host'      => env('DB_HOST'),
+            'database'  => env('DB_DATABASE'),
+            'username'  => env('DB_USERNAME'),
+            'password'  => env('DB_PASSWORD'),
             'port'     => 27017,
-            'database' => 'orderlyhealth'
+
         ),
 
         'sqlite' => [
